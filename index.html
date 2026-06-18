@@ -8,6 +8,7 @@
         :root {
             --primary: #1e3a8a;
             --secondary: #dc2626;
+            --success: #16a34a; /* De groene kleur voor de prijzen */
             --dark: #1f2937;
             --light: #f3f4f6;
         }
@@ -43,7 +44,9 @@
         .card ul { list-style: none; }
         .card ul li { padding: 10px 0; border-bottom: 1px dashed #e5e7eb; display: flex; justify-content: space-between; align-items: center; }
         .card ul li:last-child { border: none; }
-        .price { font-weight: bold; color: var(--secondary); font-size: 1.1rem; }
+        
+        /* GELD TEKST IN HET GROEN */
+        .price { font-weight: bold; color: var(--success); font-size: 1.1rem; }
         
         /* ONDERHOUD EN SERVICES LIJST ZONDER VINKJES */
         .service-list { list-style: none; }
