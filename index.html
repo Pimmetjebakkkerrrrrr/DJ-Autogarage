@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ's Auto Garage - APK, Onderhoud & Services</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #dc2626;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { color: var(--dark); background: #ffffff; line-height: 1.6; }
+        header { background: var(--dark); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--secondary); }
+        header h1 { font-size: 2.5rem; color: #ffffff; }
+        header p { color: #9ca3af; font-size: 1.1rem; margin-top: 5px; }
+        
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        
+        .intro-box { background: var(--light); padding: 20px; border-left: 5px solid var(--primary); margin-bottom: 40px; border-radius: 4px; }
+        .intro-box h2 { color: var(--primary); margin-bottom: 10px; }
+        
+        h2.section-title { font-size: 1.8rem; color: var(--dark); margin-bottom: 20px; border-bottom: 2px solid var(--light); padding-bottom: 10px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .card { background: #fff; padding: 25px; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.3rem; }
+        .card ul { list-style: none; }
+        .card ul li { padding: 8px 0; border-bottom: 1px dashed #e5e7eb; display: flex; justify-content: space-between; }
+        .card ul li:last-child { border: none; }
+        
+        .price { font-weight: bold; color: var(--secondary); }
+        .service-list li { display: block !important; padding-left: 15px; position: relative; }
+        .service-list li::before { content: "✓"; position: absolute; left: 0; color: var(--secondary); font-weight: bold; }
+        
+        footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 60px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DJ's Auto Garage</h1>
+        <p>Betrouwbaar onderhoud, scherpe prijzen</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="intro-box">
+            <h2>Kleine of Grote beurt inclusief APK?</h2>
+            <p>De totale kosten zijn afhankelijk van eventuele defecten of noodzakelijke reparaties aan uw auto. Wij overleggen altijd vooraf met u!</p>
+        </div>
+
+        <!-- PRODUCTEN SECTIE -->
+        <h2 class="section-title">Onze Producten & Onderdelen</h2>
+        <div class="grid" style="grid-template-columns: 1fr;">
+            <div class="card">
+                <h3>Vaste prijzen (inclusief montage)</h3>
+                <ul>
+                    <li><span>Banden</span> <span class="price">€ 60,00</span></li>
+                    <li><span>Bougie</span> <span class="price">€ 12,00</span></li>
+                    <li><span>Filter</span> <span class="price">€ 50,00</span></li>
+                    <li><span>Interieurfilters</span> <span class="price">€ 31,75</span></li>
+                    <li><span>Remvloeistof</span> <span class="price">€ 12,00</span></li>
+                    <li><span>Ruitenwisser</span> <span class="price">€ 15,65</span></li>
+                    <li><span>Distributieriem</span> <span class="price">€ 900,00</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ONDERHOUD EN SERVICES -->
+        <h2 class="section-title">Onderhoud & Specialistische Services</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <h3>Onderhoudsmogelijkheden</h3>
+                <ul class="service-list">
+                    <li>Algemene Periodieke Keuring (APK)</li>
+                    <li>Kleine beurt</li>
+                    <li>Grote beurt</li>
+                    <li>Advanced Driver Assistance Systems (ADAS) kalibratie</li>
+                    <li>Onderhoud voor elektrische en hybride auto's</li>
+                    <li>Behoud van fabrieksgarantie</li>
+                    <li>Onderhoud voor leaseauto's</li>
+                    <li>Bedrijfswagen onderhoud</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Werkplaatsservices</h3>
+                <ul class="service-list">
+                    <li>Accucheck</li>
+                    <li>Airco controle</li>
+                    <li>Bandenwissel</li>
+                    <li>Remmenservice</li>
+                    <li>Algemene reparaties</li>
+                    <li>Trekhaak monteren</li>
+                    <li>Uitlijnen van de wielen</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DJ's Auto Garage. Alle rechten voorbehouden.</p>
+    </footer>
+
+</body>
+</html>
