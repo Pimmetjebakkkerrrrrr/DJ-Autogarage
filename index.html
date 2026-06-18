@@ -13,29 +13,57 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
         body { color: var(--dark); background: #ffffff; line-height: 1.6; }
-        header { background: var(--dark); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--secondary); }
-        header h1 { font-size: 2.5rem; color: #ffffff; }
-        header p { color: #9ca3af; font-size: 1.1rem; margin-top: 5px; }
+        
+        /* GROTERE HEADER MET EIGEN ACHTERGRONDFOTO */
+        header { 
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/Garage.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; 
+            padding: 120px 20px; /* Veel grotere padding voor een robuuste uitstraling */
+            text-align: center; 
+            border-bottom: 6px solid var(--secondary);
+        }
+        header h1 { font-size: 3.8rem; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
+        header p { color: #e5e7eb; font-size: 1.4rem; margin-top: 10px; font-weight: 500; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
         
         .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
         
-        .intro-box { background: var(--light); padding: 20px; border-left: 5px solid var(--primary); margin-bottom: 40px; border-radius: 4px; }
+        .intro-box { background: var(--light); padding: 25px; border-left: 5px solid var(--primary); margin-bottom: 40px; border-radius: 4px; }
         .intro-box h2 { color: var(--primary); margin-bottom: 10px; }
         
         h2.section-title { font-size: 1.8rem; color: var(--dark); margin-bottom: 20px; border-bottom: 2px solid var(--light); padding-bottom: 10px; }
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
-        .card { background: #fff; padding: 25px; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.3rem; }
+        .card { background: #fff; padding: 25px; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.3rem; border-bottom: 1px solid #f3f4f6; padding-bottom: 8px; }
+        
+        /* PRODUCTEN LIJST */
         .card ul { list-style: none; }
-        .card ul li { padding: 8px 0; border-bottom: 1px dashed #e5e7eb; display: flex; justify-content: space-between; }
+        .card ul li { padding: 10px 0; border-bottom: 1px dashed #e5e7eb; display: flex; justify-content: space-between; align-items: center; }
         .card ul li:last-child { border: none; }
+        .price { font-weight: bold; color: var(--secondary); font-size: 1.1rem; }
         
-        .price { font-weight: bold; color: var(--secondary); }
-        .service-list li { display: block !important; padding-left: 15px; position: relative; }
-        .service-list li::before { content: "✓"; position: absolute; left: 0; color: var(--secondary); font-weight: bold; }
+        /* RECHTS OPGEBOUWDE SERVICE-LIJST MET VINKJES LINKS ERNAAST */
+        .service-list li { 
+            display: block; 
+            padding: 10px 0 10px 30px; 
+            position: relative; 
+            border-bottom: 1px solid #f9fafb;
+        }
+        .service-list li::before { 
+            content: "✓"; 
+            position: absolute; 
+            left: 5px; 
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary); 
+            font-weight: bold; 
+            font-size: 1.2rem;
+        }
         
-        footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 60px; font-size: 0.9rem; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 25px; margin-top: 60px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
