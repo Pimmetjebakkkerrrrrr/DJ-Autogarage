@@ -16,9 +16,29 @@
             --dark: #1f2937;
             --light: #f3f4f6;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { color: var(--dark); background: #ffffff; line-height: 1.6; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; scroll-behavior: smooth; }
+        body { color: var(--dark); background: #ffffff; line-height: 1.6; padding-top: 60px; /* Ruimte voor de vaste navigatiebalk */ }
         
+        /* MODERN VASTE NAVIGATIEBALK */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--dark);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            height: 60px;
+        }
+        nav .logo { color: #ffffff; font-weight: bold; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 1px; }
+        nav ul { list-style: none; display: flex; gap: 25px; }
+        nav ul li a { color: #e5e7eb; text-decoration: none; font-weight: 500; font-size: 1rem; transition: color 0.3s; }
+        nav ul li a:hover { color: var(--secondary); }
+
         /* GROTERE HEADER MET EIGEN ACHTERGRONDFOTO */
         header { 
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/Garage.jpeg'); 
@@ -26,7 +46,7 @@
             background-position: center;
             background-repeat: no-repeat;
             color: white; 
-            padding: 120px 20px; 
+            padding: 140px 20px; 
             text-align: center; 
             border-bottom: 6px solid var(--secondary);
         }
@@ -38,7 +58,7 @@
         .intro-box { background: var(--light); padding: 25px; border-left: 5px solid var(--primary); margin-bottom: 40px; border-radius: 4px; }
         .intro-box h2 { color: var(--primary); margin-bottom: 10px; }
         
-        h2.section-title { font-size: 1.8rem; color: var(--dark); margin-bottom: 20px; border-bottom: 2px solid var(--light); padding-bottom: 10px; }
+        h2.section-title { font-size: 1.8rem; color: var(--dark); margin-bottom: 20px; border-bottom: 2px solid var(--light); padding-bottom: 10px; padding-top: 20px; }
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
         .card { background: #fff; padding: 25px; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
@@ -60,13 +80,34 @@
             font-size: 1.05rem;
         }
         .service-list li:last-child { border: none; }
+
+        /* AUTO VERKOOP SECTIE */
+        .car-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .car-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; }
+        .car-card:hover { transform: translateY(-5px); }
+        .car-img { width: 100%; height: 200px; object-fit: cover; }
+        .car-info { padding: 20px; }
+        .car-info h4 { font-size: 1.3rem; color: var(--dark); margin-bottom: 8px; }
+        .car-details { font-size: 0.9rem; color: #6b7280; margin-bottom: 15px; }
+        .car-price { font-size: 1.4rem; font-weight: bold; color: var(--success); }
         
         footer { background: var(--dark); color: white; text-align: center; padding: 25px; margin-top: 60px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <header>
+    <!-- NAVIGATIEBALK -->
+    <nav>
+        <div class="logo">DJ's Garage</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#onderhoud">Garage & Services</a></li>
+            <li><a href="#onderdelen">Onderdelen</a></li>
+            <li><a href="#autokopen">Auto Kopen</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
         <h1>DJ's Auto Garage</h1>
         <p>Betrouwbaar onderhoud, scherpe prijzen</p>
     </header>
@@ -79,7 +120,7 @@
         </div>
 
         <!-- PRODUCTEN SECTIE -->
-        <h2 class="section-title">Onze Producten & Onderdelen</h2>
+        <h2 class="section-title" id="onderdelen">Onze Producten & Onderdelen</h2>
         <div class="grid" style="grid-template-columns: 1fr;">
             <div class="card">
                 <h3>Vaste prijzen (inclusief montage)</h3>
@@ -96,7 +137,7 @@
         </div>
 
         <!-- ONDERHOUD EN SERVICES -->
-        <h2 class="section-title">Onderhoud & Specialistische Services</h2>
+        <h2 class="section-title" id="onderhoud">Onderhoud & Specialistische Services</h2>
         <div class="grid">
             
             <div class="card">
@@ -124,6 +165,42 @@
                     <li>Trekhaak monteren</li>
                     <li>Uitlijnen van de wielen</li>
                 </ul>
+            </div>
+
+        </div>
+
+        <!-- AUTO KOPEN SECTIE -->
+        <h2 class="section-title" id="autokopen">Auto Kopen (Occasions)</h2>
+        <div class="car-grid">
+            
+            <!-- Auto 1 -->
+            <div class="car-card">
+                <img src="https://unsplash.com" alt="Volkswagen Golf" class="car-img">
+                <div class="car-info">
+                    <h4>Volkswagen Golf 1.5 TSI</h4>
+                    <p class="car-details">Bouwjaar: 2021 | KM-stand: 48.500 km | Benzine</p>
+                    <div class="car-price">€ 21.950,-</div>
+                </div>
+            </div>
+
+            <!-- Auto 2 -->
+            <div class="car-card">
+                <img src="https://unsplash.com" alt="BMW 3-Serie" class="car-img">
+                <div class="car-info">
+                    <h4>BMW 320i High Executive</h4>
+                    <p class="car-details">Bouwjaar: 2020 | KM-stand: 72.300 km | Automaat</p>
+                    <div class="car-price">€ 28.450,-</div>
+                </div>
+            </div>
+
+            <!-- Auto 3 -->
+            <div class="car-card">
+                <img src="https://unsplash.com" alt="Toyota Yaris" class="car-img">
+                <div class="car-info">
+                    <h4>Toyota Yaris 1.5 Hybrid</h4>
+                    <p class="car-details">Bouwjaar: 2022 | KM-stand: 29.100 km | Hybride</p>
+                    <div class="car-price">€ 18.900,-</div>
+                </div>
             </div>
 
         </div>
