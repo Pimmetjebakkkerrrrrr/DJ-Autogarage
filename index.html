@@ -81,15 +81,14 @@
         }
         .service-list li:last-child { border: none; }
 
-        /* AUTO VERKOOP SECTIE */
+        /* AUTO VERKOOP SECTIE ZONDER FOTO'S */
         .car-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .car-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; }
         .car-card:hover { transform: translateY(-5px); }
-        .car-img { width: 100%; height: 200px; object-fit: cover; }
-        .car-info { padding: 20px; border-top: 1px solid #e5e7eb; }
-        .car-info h4 { font-size: 1.3rem; color: var(--dark); margin-bottom: 8px; }
-        .car-details { font-size: 0.9rem; color: #6b7280; margin-bottom: 15px; }
-        .car-price { font-size: 1.4rem; font-weight: bold; color: var(--success); }
+        .car-info { padding: 25px; }
+        .car-info h4 { font-size: 1.4rem; color: var(--primary); margin-bottom: 8px; border-bottom: 1px solid #f3f4f6; padding-bottom: 8px; }
+        .car-details { font-size: 0.95rem; color: #6b7280; margin-bottom: 15px; }
+        .car-price { font-size: 1.5rem; font-weight: bold; color: var(--success); }
         
         footer { background: var(--dark); color: white; text-align: center; padding: 25px; margin-top: 60px; font-size: 0.9rem; }
     </style>
@@ -173,9 +172,8 @@
         <h2 class="section-title" id="autokopen">Auto Kopen (Occasions)</h2>
         <div class="car-grid">
             
-            <!-- Auto 1: Volkswagen -->
+            <!-- Auto 1 -->
             <div class="car-card">
-                <img src="https://unsplash.com" alt="Grijze Hatchback" class="car-img">
                 <div class="car-info">
                     <h4>Volkswagen Golf 1.5 TSI</h4>
                     <p class="car-details">Bouwjaar: 2021 | KM-stand: 48.500 km | Benzine</p>
@@ -183,9 +181,8 @@
                 </div>
             </div>
 
-            <!-- Auto 2: BMW -->
+            <!-- Auto 2 -->
             <div class="car-card">
-                <img src="https://unsplash.com" alt="Blauwe Sedan" class="car-img">
                 <div class="car-info">
                     <h4>BMW 320i Sedan</h4>
                     <p class="car-details">Bouwjaar: 2020 | KM-stand: 72.300 km | Automaat</p>
@@ -193,9 +190,8 @@
                 </div>
             </div>
 
-            <!-- Auto 3: Compacte auto -->
+            <!-- Auto 3 -->
             <div class="car-card">
-                <img src="https://unsplash.com" alt="Compacte Auto" class="car-img">
                 <div class="car-info">
                     <h4>Toyota Yaris 1.5 Hybrid</h4>
                     <p class="car-details">Bouwjaar: 2022 | KM-stand: 29.100 km | Hybride</p>
