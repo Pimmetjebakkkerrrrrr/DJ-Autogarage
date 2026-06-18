@@ -8,7 +8,6 @@
         :root {
             --primary: #1e3a8a;
             --secondary: #dc2626;
-            --success: #16a34a;
             --dark: #1f2937;
             --light: #f3f4f6;
         }
@@ -46,25 +45,14 @@
         .card ul li:last-child { border: none; }
         .price { font-weight: bold; color: var(--secondary); font-size: 1.1rem; }
         
-        /* ONDERHOUD EN SERVICES LIJST MET VINKJES LINKS ERNAAST */
+        /* ONDERHOUD EN SERVICES LIJST ZONDER VINKJES */
         .service-list { list-style: none; }
         .service-list li { 
-            position: relative; 
-            padding: 10px 0 10px 35px; 
+            padding: 10px 0; 
             border-bottom: 1px solid #f3f4f6;
             font-size: 1.05rem;
         }
         .service-list li:last-child { border: none; }
-        .service-list li::before { 
-            content: "✓"; 
-            position: absolute; 
-            left: 5px; 
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--success); 
-            font-weight: bold; 
-            font-size: 1.3rem;
-        }
         
         footer { background: var(--dark); color: white; text-align: center; padding: 25px; margin-top: 60px; font-size: 0.9rem; }
     </style>
